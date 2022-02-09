@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { MovieService } from './movie.service';
 
+//coment to try changes
 
 @Component({
   selector: 'app-root',

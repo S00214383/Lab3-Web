@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { MovieService } from './movie.service';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +10,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movie-list';
+  movies=[] as any;
+
+  constructor (private moviesService: MovieService) {}
+
+  ngOnInit(){
+    this.movies = this.moviesService.getMovies();
+    console.log(this.movies);
+
+  }
+
+  
 }
+
+
+

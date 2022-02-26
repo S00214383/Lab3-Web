@@ -1,6 +1,27 @@
 <div class='container'>
-<h1>Movies</h1>
-<app-add-movie></app-add-movie>
+        <h1>Movies IO</h1>
+        <app-add-movie></app-add-movie>
 
 </div>
+<div class='container'>
+        <div class="row">
+                <div class="col">
+                        <app-list-movies (onSelectedMovie)="setSelectedMovie($event)"></app-list-movies>
+
+
+
+                </div>
+                <div class="col">
+                        <app-movie-detail [movieDetails]="mySelectedMovie"></app-movie-detail>
+
+                </div>
+
+
+        </div>
+
+
+
+</div>
+
+
 <app-list-movies></app-list-movies>

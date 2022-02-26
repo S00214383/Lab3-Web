@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 
 import { MovieService } from './movie.service';
 
+//import { Movie } from "../movie.model";
+import { Movie } from './movie.model';
+//import { Movie } from "../movie.model";
+
 //coment to try changes
 
 @Component({
@@ -10,19 +14,19 @@ import { MovieService } from './movie.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'movie-list';
-  movies=[] as any;
 
-  constructor (private moviesService: MovieService) {}
+  public mySelectedMovie: Movie | undefined ;
 
-  ngOnInit(){
-    this.movies = this.moviesService.getMovies();
-    console.log(this.movies);
+  setSelectedMovie(movie:Movie){
+    this.mySelectedMovie = movie;
+  }
+
+ 
 
   }
 
   
-}
+
 
 
 
